@@ -1,6 +1,6 @@
 .main-nav {
   background: #4d273f;
-  box-shadow: 0px 1px 5px rgba(77, 39, 63, 0.2);
+  box-shadow: 0px 1px 5px rgba(77, 39, 63, 0.4);
   position: sticky;
   top: 0;
   left: 0;
@@ -40,12 +40,13 @@
   text-decoration: none;
   line-height: 7rem;
   padding: 0.8rem 1.5rem;
+  transition: all 0.3s;
 }
 
 .main-nav ul li a:hover {
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #c8a294, 0 0 5px #cc9885;
+  color: #c8a294;
+  /* border-radius: 5px;
+  box-shadow: 0 0 5px #c8a294, 0 0 5px #cc9885; */
 }
 
 .main-nav ul ul {
@@ -79,4 +80,77 @@
 .main-nav ul ul li a:hover {
   color: #c8a294;
   box-shadow: none;
+}
+
+.show,
+.icon,
+input {
+  display: none;
+}
+
+@media all and (max-width: 1000px) {
+  .main-nav ul {
+    margin-right: 0;
+    float: left;
+  }
+
+  .main-nav .logo {
+    padding-left: 2rem;
+    width: 100%;
+  }
+
+  .main-nav ul li,
+  .main-nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav ul ul {
+    top: 7rem;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav ul ul li {
+    border-bottom: 0;
+  }
+
+  .main-nav ul ul a {
+    padding-left: 5rem;
+  }
+
+  .show {
+    display: block;
+    color: #fff;
+    padding: 0 2rem;
+    line-height: 7rem;
+    cursor: pointer;
+  }
+
+  .show:hover {
+    color: #c8a294;
+  }
+
+  .icon {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 4rem;
+    line-height: 7rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  .show + a,
+  ul {
+    display: none;
+  }
+
+  [id^='btn']:checked + ul {
+    display: block;
+  }
 }

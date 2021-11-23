@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav className="main-nav">
         <div className="logo">ΚΕΝΤΡΟ Φ</div>
+
+        <label htmlFor="btn" className="icon" onClick={toggle}>
+          <span>
+            <i className={isOpen ? `fa fa-times` : `fa fa-bars`}></i>
+          </span>
+        </label>
+        <input type="checkbox" id="btn" />
 
         <ul>
           <li>
@@ -13,7 +26,11 @@ const Navbar = () => {
           </li>
 
           <li>
+            <label htmlFor="btn-1" className="show">
+              ΣΧΕΤΙΚΑ +
+            </label>
             <a href="#">ΣΧΕΤΙΚΑ</a>
+            <input type="checkbox" id="btn-1" />
             <ul>
               <li>
                 <a href="#">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a>
@@ -32,7 +49,11 @@ const Navbar = () => {
           </li>
 
           <li>
+            <label htmlFor="btn-2" className="show">
+              ΣΤΗΡΙΞΤΕ ΜΑΣ +
+            </label>
             <a href="#">ΣΤΗΡΙΞΤΕ ΜΑΣ</a>
+            <input type="checkbox" id="btn-2" />
             <ul>
               <li>
                 <a href="#">ΔΩΡΕΑ</a>
@@ -53,7 +74,11 @@ const Navbar = () => {
           </li>
 
           <li>
+            <label htmlFor="btn-3" className="show">
+              ΔΗΜΟΣΙΕΥΣΕΙΣ +
+            </label>
             <a href="#">ΔΗΜΟΣΙΕΥΣΕΙΣ</a>
+            <input type="checkbox" id="btn-3" />
             <ul>
               <li>
                 <a href="#">ΤΑ ΝΕΑ ΜΑΣ</a>
