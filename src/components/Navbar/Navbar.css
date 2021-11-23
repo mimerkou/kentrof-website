@@ -1,0 +1,82 @@
+.main-nav {
+  background: #4d273f;
+  box-shadow: 0px 1px 5px rgba(77, 39, 63, 0.2);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.main-nav::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.main-nav .logo {
+  float: left;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 7rem;
+  padding-left: 6rem;
+}
+
+.main-nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.main-nav ul li {
+  /* float: left; */
+  display: inline-block;
+  background: #4d273f;
+  margin: 0 0.5rem;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 7rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.main-nav ul li a:hover {
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #c8a294, 0 0 5px #cc9885;
+}
+
+.main-nav ul ul {
+  position: absolute;
+  top: 9rem;
+  border-top: 1px solid #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.5s;
+}
+
+.main-nav ul li:hover > ul {
+  top: 7rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-nav ul ul li {
+  position: relative;
+  margin: 0;
+  width: 19rem;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid #fff;
+}
+
+.main-nav ul ul li a {
+  transition: all 0.3s;
+}
+
+.main-nav ul ul li a:hover {
+  color: #c8a294;
+  box-shadow: none;
+}
