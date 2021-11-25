@@ -109,7 +109,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/kentrof-logo.jpg';
+import logo from '../../assets/logo.jpg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -131,13 +131,20 @@ const Navbar = () => {
           <img src={logo} alt="Logo" />
         </Link>
 
-        <div className="menu-icon" onClick={clickHandler}>
+        {/* <div className="menu-icon" onClick={clickHandler}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
+        </div> */}
 
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <label htmlFor="btn" className="menu-icon" onClick={clickHandler}>
+          <span>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </span>
+        </label>
+        <input type="checkbox" id="btn" />
+
+        <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/home" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/home" onClick={closeMobileMenu}>
               ΑΡΧΙΚΗ
             </Link>
           </li>
@@ -209,11 +216,11 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <label htmlFor="btn-2" className="show">
+            <label htmlFor="btn-3" className="show">
               ΔΗΜΟΣΙΕΥΣΕΙΣ +
             </label>
             <Link to="/publications">ΣΤΗΡΙΞΤΕ ΜΑΣ</Link>
-            <input type="checkbox" id="btn-2" />
+            <input type="checkbox" id="btn-3" />
             <ul className="dropdown">
               <li className="dropdown-item">
                 <Link to="/ournews" onClick={closeMobileMenu}>
