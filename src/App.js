@@ -1,69 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
+      <BrowserRouter>
+        <Navbar />
+        {/* <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+        </Routes> */}
+      </BrowserRouter>
     </>
   );
 };
