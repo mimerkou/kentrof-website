@@ -4,7 +4,9 @@ import { FaBars, FaCaretDown } from 'react-icons/fa';
 import logo from '../../assets/logo.jpg';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { toggle } = props;
+
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [supportDropdown, setSupportDropdown] = useState(false);
   const [publicationsDropdown, setPublicationsDropdown] = useState(false);
@@ -41,7 +43,7 @@ const Navbar = () => {
             <img src={logo} alt="Logo" />
           </Link>
 
-          <div className="mobile-icon">
+          <div className="mobile-icon" onClick={toggle}>
             <FaBars />
           </div>
 
