@@ -1,251 +1,167 @@
-// import React, { useState } from 'react';
-// import './Navbar.css';
-
-// const Navbar = (props) => {
-//   const [click, setClick] = useState(false);
-
-//   const clickHandler = () => {
-//     setClick(!click);
-//   };
-
-//   const closeMobileMenu = () => {
-//     setClick(false);
-//   };
-
-//   return (
-//     <>
-//       <nav className="main-nav">
-//         <div className="logo">ΚΕΝΤΡΟ Φ</div>
-
-//         <label htmlFor="btn" className="icon" onClick={clickHandler}>
-//           <span>
-//             <i className={click ? `fa fa-times` : `fa fa-bars`}></i>
-//           </span>
-//         </label>
-//         <input type="checkbox" id="btn" />
-
-//         <ul className="nav-menu">
-//           <li onClick={closeMobileMenu}>
-//             <a href="#">ΑΡΧΙΚΗ</a>
-//           </li>
-
-//           <li>
-//             <label htmlFor="btn-1" className="show">
-//               ΣΧΕΤΙΚΑ +
-//             </label>
-//             <a href="#">ΣΧΕΤΙΚΑ</a>
-//             <input type="checkbox" id="btn-1" />
-//             <ul>
-//               <li>
-//                 <a href="#">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΓΙΑΤΙ ΚΕΝΤΡΟ Φ</a>
-//               </li>
-//               <li>
-//                 <a href="#">Η ΟΜΑΔΑ ΜΑΣ</a>
-//               </li>
-//             </ul>
-//           </li>
-
-//           <li>
-//             <a href="#">ΔΡΑΣΕΙΣ</a>
-//           </li>
-
-//           <li>
-//             <label htmlFor="btn-2" className="show">
-//               ΣΤΗΡΙΞΤΕ ΜΑΣ +
-//             </label>
-//             <a href="#">ΣΤΗΡΙΞΤΕ ΜΑΣ</a>
-//             <input type="checkbox" id="btn-2" />
-//             <ul>
-//               <li>
-//                 <a href="#">ΔΩΡΕΑ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΕΘΕΛΟΝΤΙΣΜΟΣ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΧΡΗΜΑΤΟΔΟΤΕΣ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΥΠΟΣΤΗΡΙΚΤΕΣ</a>
-//               </li>
-//             </ul>
-//           </li>
-
-//           <li>
-//             <label htmlFor="btn-3" className="show">
-//               ΔΗΜΟΣΙΕΥΣΕΙΣ +
-//             </label>
-//             <a href="#">ΔΗΜΟΣΙΕΥΣΕΙΣ</a>
-//             <input type="checkbox" id="btn-3" />
-//             <ul>
-//               <li>
-//                 <a href="#">ΤΑ ΝΕΑ ΜΑΣ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΕΓΡΑΨΑΝ ΓΙΑ ΕΜΑΣ</a>
-//               </li>
-//               <li>
-//                 <a href="#">ΑΡΘΡΟΓΡΑΦΙΑ</a>
-//               </li>
-//             </ul>
-//           </li>
-
-//           <li>
-//             <a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-//           </li>
-//         </ul>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaBars, FaCaretDown } from 'react-icons/fa';
 import logo from '../../assets/logo.jpg';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
+  const [aboutDropdown, setAboutDropdown] = useState(false);
+  const [supportDropdown, setSupportDropdown] = useState(false);
+  const [publicationsDropdown, setPublicationsDropdown] = useState(false);
 
-  const clickHandler = () => {
-    setClick(!click);
+  const aboutMouseEnterHandler = () => {
+    setAboutDropdown(true);
   };
 
-  const closeMobileMenu = () => {
-    setClick(false);
+  const aboutMouseLeaveHandler = () => {
+    setAboutDropdown(false);
+  };
+
+  const supportMouseEnterHandler = () => {
+    setSupportDropdown(true);
+  };
+
+  const supportMouseLeaveHandler = () => {
+    setSupportDropdown(false);
+  };
+
+  const publicationsMouseEnterHandler = () => {
+    setPublicationsDropdown(true);
+  };
+
+  const publicationsMouseLeaveHandler = () => {
+    setPublicationsDropdown(false);
   };
 
   return (
     <>
-      <nav className="navbar">
-        <Link to="/home" className="navbar-logo">
-          {/* ΚΕΝΤΡΟ Φ */}
-          <img src={logo} alt="Logo" />
-        </Link>
+      <nav className="nav">
+        <div className="navbar-container">
+          <Link to="/home" className="nav-logo">
+            <img src={logo} alt="Logo" />
+          </Link>
 
-        {/* <div className="menu-icon" onClick={clickHandler}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div> */}
+          <div className="mobile-icon">
+            <FaBars />
+          </div>
 
-        <label htmlFor="btn" className="menu-icon" onClick={clickHandler}>
-          <span>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </span>
-        </label>
-        <input type="checkbox" id="btn" />
+          <ul className="nav-menu">
+            <li className="nav-item">
+              <Link to="/home" className="nav-links">
+                Αρχικη
+              </Link>
+            </li>
 
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <Link to="/home" onClick={closeMobileMenu}>
-              ΑΡΧΙΚΗ
-            </Link>
-          </li>
+            <li
+              className="nav-item"
+              onMouseEnter={aboutMouseEnterHandler}
+              onMouseLeave={aboutMouseLeaveHandler}
+            >
+              <Link to="/about" className="nav-links">
+                Σχετικα <FaCaretDown />
+              </Link>
+              {aboutDropdown && (
+                <ul className="dropdown">
+                  <li className="dropdown-item">
+                    <Link to="/who-we-are" className="dropdown-links">
+                      Ποιοι ειμαστε
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/why-center-f" className="dropdown-links">
+                      Γιατι Κεντρο Φ
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/our-team" className="dropdown-links">
+                      Η ομαδα μας
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
 
-          <li className="nav-item">
-            <label htmlFor="btn-1" className="show">
-              ΣΧΕΤΙΚΑ +
-            </label>
-            <Link to="/about">ΣΧΕΤΙΚΑ</Link>
-            <input type="checkbox" id="btn-1" />
-            <ul className="dropdown">
-              <li className="dropdown-item">
-                <Link to="/whoweare" onClick={closeMobileMenu}>
-                  ΠΟΙΟΙ ΕΙΜΑΣΤΕ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/whykentrof" onClick={closeMobileMenu}>
-                  ΓΙΑΤΙ ΚΕΝΤΡΟ Φ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/ourteam" onClick={closeMobileMenu}>
-                  Η ΟΜΑΔΑ ΜΑΣ
-                </Link>
-              </li>
-            </ul>
-          </li>
+            <li className="nav-item">
+              <Link to="/actions" className="nav-links">
+                Δρασεις
+              </Link>
+            </li>
 
-          <li className="nav-item">
-            <Link to="/actions" className="nav-links" onClick={closeMobileMenu}>
-              ΔΡΑΣΕΙΣ
-            </Link>
-          </li>
+            <li
+              className="nav-item"
+              onMouseEnter={supportMouseEnterHandler}
+              onMouseLeave={supportMouseLeaveHandler}
+            >
+              <Link to="/support-us" className="nav-links">
+                Στηριξτε μας <FaCaretDown />
+              </Link>
+              {supportDropdown && (
+                <ul className="dropdown">
+                  <li className="dropdown-item">
+                    <Link to="/donation" className="dropdown-links">
+                      Δωρεα
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/volunteering" className="dropdown-links">
+                      Εθελοντισμος
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/practice" className="dropdown-links">
+                      Πρακτικη Ασκηση
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/donors" className="dropdown-links">
+                      Χρηματοδοτες
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/supporters" className="dropdown-links">
+                      Υποστηρικτες
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
 
-          <li className="nav-item">
-            <label htmlFor="btn-2" className="show">
-              ΣΤΗΡΙΞΤΕ ΜΑΣ +
-            </label>
-            <Link to="/support">ΣΤΗΡΙΞΤΕ ΜΑΣ</Link>
-            <input type="checkbox" id="btn-2" />
-            <ul className="dropdown">
-              <li className="dropdown-item">
-                <Link to="/donation" onClick={closeMobileMenu}>
-                  ΔΩΡΕΑ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/volunteering" onClick={closeMobileMenu}>
-                  ΕΘΕΛΟΝΤΙΣΜΟΣ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/practice" onClick={closeMobileMenu}>
-                  ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/donors" onClick={closeMobileMenu}>
-                  ΧΡΗΜΑΤΟΔΟΤΕΣ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/supporters" onClick={closeMobileMenu}>
-                  ΥΠΟΣΤΗΡΙΚΤΕΣ
-                </Link>
-              </li>
-            </ul>
-          </li>
+            <li
+              className="nav-item"
+              onMouseEnter={publicationsMouseEnterHandler}
+              onMouseLeave={publicationsMouseLeaveHandler}
+            >
+              <Link to="/publications" className="nav-links">
+                Δημοσιευσεις <FaCaretDown />
+              </Link>
+              {publicationsDropdown && (
+                <ul className="dropdown">
+                  <li className="dropdown-item">
+                    <Link to="/our-news" className="dropdown-links">
+                      Τα νεα μας
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/written-about-us" className="dropdown-links">
+                      Εγραψαν για εμας
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link to="/articles" className="dropdown-links">
+                      Αρθρογραφια
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
 
-          <li className="nav-item">
-            <label htmlFor="btn-3" className="show">
-              ΔΗΜΟΣΙΕΥΣΕΙΣ +
-            </label>
-            <Link to="/publications">ΣΤΗΡΙΞΤΕ ΜΑΣ</Link>
-            <input type="checkbox" id="btn-3" />
-            <ul className="dropdown">
-              <li className="dropdown-item">
-                <Link to="/ournews" onClick={closeMobileMenu}>
-                  ΤΑ ΝΕΑ ΜΑΣ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/writtenaboutus" onClick={closeMobileMenu}>
-                  ΕΓΡΑΨΑΝ ΓΙΑ ΕΜΑΣ
-                </Link>
-              </li>
-              <li className="dropdown-item">
-                <Link to="/articles" onClick={closeMobileMenu}>
-                  ΑΡΘΡΟΓΡΑΦΙΑ
-                </Link>
-              </li>
-            </ul>
-          </li>
-
-          <li className="nav-item">
-            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
-              ΕΠΙΚΟΙΝΩΝΙΑ
-            </Link>
-          </li>
-        </ul>
+            <li className="nav-item">
+              <Link to="/contact" className="nav-links">
+                Επικοινωνια
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );
