@@ -3,7 +3,7 @@
   z-index: 999;
   width: 30rem;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   background: #4d273f;
   display: grid;
   align-items: center;
