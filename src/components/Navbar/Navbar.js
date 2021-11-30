@@ -59,9 +59,9 @@ const Navbar = (props) => {
               onMouseEnter={aboutMouseEnterHandler}
               onMouseLeave={aboutMouseLeaveHandler}
             >
-              <Link to="/about" className="nav-links">
+              <div className="nav-links">
                 Σχετικα <FaCaretDown />
-              </Link>
+              </div>
               {aboutDropdown && (
                 <ul className="dropdown">
                   <li className="dropdown-item">
@@ -94,9 +94,9 @@ const Navbar = (props) => {
               onMouseEnter={supportMouseEnterHandler}
               onMouseLeave={supportMouseLeaveHandler}
             >
-              <Link to="/support-us" className="nav-links">
+              <div className="nav-links">
                 Στηριξτε μας <FaCaretDown />
-              </Link>
+              </div>
               {supportDropdown && (
                 <ul className="dropdown">
                   <li className="dropdown-item">
@@ -133,9 +133,9 @@ const Navbar = (props) => {
               onMouseEnter={publicationsMouseEnterHandler}
               onMouseLeave={publicationsMouseLeaveHandler}
             >
-              <Link to="/publications" className="nav-links">
+              <div className="nav-links">
                 Δημοσιευσεις <FaCaretDown />
-              </Link>
+              </div>
               {publicationsDropdown && (
                 <ul className="dropdown">
                   <li className="dropdown-item">

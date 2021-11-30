@@ -83,6 +83,7 @@ submenu hover: #705265
 
 .dropdown {
   background: #5e3c52;
+  background: #4d273f;
   position: absolute;
   top: 8rem;
   left: 0;
@@ -108,7 +109,8 @@ submenu hover: #705265
 
 .dropdown-links:hover,
 .dropdown-links:active {
-  color: #c8a294;
+  /* color: #c8a294; */
+  background: #5e3c52;
   transition: all 0.3s;
 }
 

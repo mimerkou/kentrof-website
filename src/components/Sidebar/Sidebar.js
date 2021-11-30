@@ -1,29 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTimes, FaCaretDown } from 'react-icons/fa';
 import './Sidebar.css';
 
-const SidebarContainer = styled.aside`
-  position: fixed;
-  z-index: 999;
-  width: 30rem;
-  height: 100%;
-  background: #4d273f;
-  display: grid;
-  align-items: center;
-  top: 0;
-  right: 0;
-  transition: all 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-`;
-
 const Sidebar = (props) => {
   const { isOpen, toggle } = props;
 
+  const [aboutDropdown, setAboutDropdown] = useState(false);
+  const [supportDropdown, setSupportDropdown] = useState(false);
+  const [publicationsDropdown, setPublicationsDropdown] = useState(false);
+
+  const toggleAboutDropdown = () => {
+    setAboutDropdown(!aboutDropdown);
+  };
+
+  const toggleSupportDropdown = () => {
+    setSupportDropdown(!supportDropdown);
+  };
+
+  const togglePublicationsDropdown = () => {
+    setPublicationsDropdown(!publicationsDropdown);
+  };
+
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <div
+      className={isOpen ? 'sidebar-container active' : 'sidebar-container'}
+      isOpen={isOpen}
+    >
       <div className="icon" onClick={toggle}>
         <FaTimes />
       </div>
@@ -37,38 +40,40 @@ const Sidebar = (props) => {
           </li>
 
           <li className="sidebar-item">
-            <Link to="/about" className="sidebar-link" onClick={toggle}>
+            <div className="sidebar-link" onClick={toggleAboutDropdown}>
               Σχετικα <FaCaretDown />
-            </Link>
-            <ul className="sidebar-dropdown">
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/who-we-are"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Ποιοι ειμαστε
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/why-center-f"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Γιατι Κεντρο Φ
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/our-team"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Η ομαδα μας
-                </Link>
-              </li>
-            </ul>
+            </div>
+            {aboutDropdown && (
+              <ul className="sidebar-dropdown">
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/who-we-are"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Ποιοι ειμαστε
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/why-center-f"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Γιατι Κεντρο Φ
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/our-team"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Η ομαδα μας
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
 
           <li className="sidebar-item">
@@ -78,91 +83,95 @@ const Sidebar = (props) => {
           </li>
 
           <li className="sidebar-item">
-            <Link to="/support-us" className="sidebar-link" onClick={toggle}>
+            <div className="sidebar-link" onClick={toggleSupportDropdown}>
               Στηριξτε μας <FaCaretDown />
-            </Link>
-            <ul className="sidebar-dropdown">
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/donation"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Δωρεα
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/volunteering"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Εθελοντισμος
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/practice"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Πρακτικη Ασκηση
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/donors"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Χρηματοδοτες
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/supporters"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Υποστηρικτες
-                </Link>
-              </li>
-            </ul>
+            </div>
+            {supportDropdown && (
+              <ul className="sidebar-dropdown">
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/donation"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Δωρεα
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/volunteering"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Εθελοντισμος
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/practice"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Πρακτικη Ασκηση
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/donors"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Χρηματοδοτες
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/supporters"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Υποστηρικτες
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
 
           <li className="sidebar-item">
-            <Link to="/publications" className="sidebar-link" onClick={toggle}>
+            <div className="sidebar-link" onClick={togglePublicationsDropdown}>
               Δημοσιευσεις <FaCaretDown />
-            </Link>
-            <ul className="sidebar-dropdown">
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/our-news"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Τα νεα μας
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/written-about-us"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Εγραψαν για εμας
-                </Link>
-              </li>
-              <li className="sidebar-dropdown-item">
-                <Link
-                  to="/articles"
-                  className="sidebar-dropdown-links"
-                  onClick={toggle}
-                >
-                  Αρθρογραφια
-                </Link>
-              </li>
-            </ul>
+            </div>
+            {publicationsDropdown && (
+              <ul className="sidebar-dropdown">
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/our-news"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Τα νεα μας
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/written-about-us"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Εγραψαν για εμας
+                  </Link>
+                </li>
+                <li className="sidebar-dropdown-item">
+                  <Link
+                    to="/articles"
+                    className="sidebar-dropdown-links"
+                    onClick={toggle}
+                  >
+                    Αρθρογραφια
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
 
           <li className="sidebar-item">
@@ -172,7 +181,7 @@ const Sidebar = (props) => {
           </li>
         </ul>
       </div>
-    </SidebarContainer>
+    </div>
   );
 };
 
