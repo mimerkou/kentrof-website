@@ -1,0 +1,22 @@
+.btn {
+  border-radius: 2rem;
+  background: #705265;
+  white-space: nowrap;
+  padding: 1.2rem 3rem;
+  letter-spacing: 0.7px;
+  color: #fff;
+  font-size: 2rem;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 1rem 3rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #4d273f;
+}

@@ -39,10 +39,30 @@
 
 .home-banner-text p {
   font-size: 2rem;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.7px;
   max-width: 70rem;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   line-height: 1.2;
   margin: 0 2.5rem;
+}
+
+.home-btn-wrapper {
+  margin-top: 3rem;
+}
+
+.home-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 3rem;
+}
+
+.home-about-img {
+  border: 1px solid black;
+}
+
+.home-about-text {
+  border: 1px solid black;
 }
