@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
+import Home from './pages/Home/Home';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +16,10 @@ const App = () => {
       <BrowserRouter>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
-        </Routes> */}
+        </Routes>
       </BrowserRouter>
     </>
   );
