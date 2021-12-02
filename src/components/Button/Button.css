@@ -1,10 +1,10 @@
-.btn {
+/* .btn {
   border-radius: 2rem;
-  background: #705265;
+  background: #ff5e4a;
+  color: #fff;
   white-space: nowrap;
   padding: 1.2rem 3rem;
   letter-spacing: 0.7px;
-  color: #fff;
   font-size: 2rem;
   outline: none;
   text-decoration: none;
@@ -18,5 +18,89 @@
 }
 
 .btn:hover {
-  background: #4d273f;
+  background: #ff3117;
+}
+
+.btn.darkBg {
+  background: #fff;
+  color: #ff5e4a;
+}
+
+.btn.darkBg:hover {
+  color: #ff3117;
+} */
+
+/* Sweep To Right */
+.btn {
+  background: #ff5e4a;
+  color: #fff;
+  white-space: nowrap;
+  padding: 1.2rem 3rem;
+  letter-spacing: 0.7px;
+  font-size: 2rem;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+  /* box-shadow: rgba(0, 0, 0, 0.7) 0 1rem 3rem 0; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff3117;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: white;
+}
+
+.btn:hover:before,
+.btn:focus:before,
+.btn:active:before {
+  transform: scaleX(1);
+}
+
+.btn.darkBg {
+  background: #fff;
+  color: #ff5e4a;
+}
+
+.btn.darkBg:before {
+  background: #ff3117;
+}
+
+.btn.darkBg:hover,
+.btn.darkBg:focus,
+.btn.darkBg:active {
+  color: white;
+}
+
+.btn.darkBg:hover:before,
+.btn.darkBg:focus:before,
+.btn.darkBg:active:before {
+  transform: scaleX(1);
 }

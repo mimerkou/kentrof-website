@@ -18,7 +18,9 @@ const Home = () => {
             </p>
           </div>
           <div className="home-btn-wrapper">
-            <Button path="/who-we-are">Ποιοι είμαστε</Button>
+            <Button path="/who-we-are" darkBg={true}>
+              Ποιοι είμαστε
+            </Button>
           </div>
         </div>
 
@@ -59,7 +61,9 @@ const Home = () => {
               δράσεων εστιάζοντας πάντα στην υποστήριξη των κρατικών δικτύων με
               απώτερο στόχο την συνεισφορά του σε μια ψυχικά υγιή κοινωνία.
             </p> */}
-            <Button path="/why-center-f">Περισσότερα</Button>
+            <Button path="/why-center-f" darkBg={false}>
+              Περισσότερα
+            </Button>
           </div>
 
           <div className="home-about-img">

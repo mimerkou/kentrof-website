@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './Button.css';
 
 const Button = (props) => {
-  const { path, children } = props;
+  const { path, darkBg, children } = props;
 
   return (
-    <Link to={path} className="btn">
+    <Link to={path} className={darkBg ? 'btn darkBg' : 'btn'}>
       {children}
     </Link>
   );
