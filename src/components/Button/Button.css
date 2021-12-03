@@ -31,7 +31,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #ff3117;
+  /* background: #ff3117; */
+  background: #174256;
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition-property: transform;
@@ -58,6 +59,7 @@
 
 .btn.darkBg:before {
   background: #ff3117;
+  /* background: #174256; */
 }
 
 .btn.darkBg:hover,
