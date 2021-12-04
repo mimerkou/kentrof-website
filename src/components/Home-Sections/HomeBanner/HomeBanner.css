@@ -1,0 +1,46 @@
+/* Banner */
+.home-banner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../../../assets/kentro-f-02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.home-banner-heading h1 {
+  font-size: 5.8rem;
+  letter-spacing: 1.5px;
+}
+
+.home-banner-text p {
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  max-width: 70rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 2.5rem;
+}
+
+.home-btn-wrapper {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 968px) {
+  .home-banner-heading h1 {
+    font-size: 5rem;
+  }
+
+  .home-banner-text p {
+    font-size: 2.1rem;
+  }
+}

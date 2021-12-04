@@ -1,0 +1,152 @@
+.actions-container {
+  background: #fff;
+  width: 100%;
+  padding: 7rem 3rem;
+  margin: 0 auto;
+  max-width: 150rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.actions-container h2 {
+  color: #174256;
+  margin-bottom: 2.4rem;
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.actions-details {
+  color: #808080;
+}
+
+.actions-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  width: 42rem;
+  height: 27rem;
+  margin: 3rem;
+  padding: 1.5rem;
+  box-shadow: 2px 3px 10px rgba(23, 66, 86, 0.5);
+  background: #fff;
+  color: #808080;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff5e4a;
+  color: #fff;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: white;
+  /* background: #174256; */
+}
+
+.card:hover:before,
+.card:focus:before,
+.card:active:before {
+  transform: scaleX(1);
+}
+
+/* shutter-out-horizontal */
+.card:before {
+  transform: scaleX(0);
+  transform-origin: 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: white;
+}
+
+.card:hover:before,
+.card:focus:before,
+.card:active:before {
+  transform: scaleX(1);
+}
+/* shutter-out-horizontal */
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.8rem;
+}
+
+.card-content h4 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+  /* color: #174256; */
+  margin-bottom: 1.5rem;
+}
+
+.actions-btn-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 968px) {
+  .actions-box {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .actions-container {
+    padding: 5rem 3rem;
+    max-width: 180rem;
+  }
+
+  .card {
+    width: 50rem;
+    height: 35rem;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .card {
+    width: 60rem;
+    height: 55rem;
+  }
+}
