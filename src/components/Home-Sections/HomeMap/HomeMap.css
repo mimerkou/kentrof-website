@@ -3,10 +3,43 @@
   width: 100%;
   padding: 7rem 3rem;
   margin: 0 auto;
-  /* max-width: 150rem; */
-  /* min-height: 100vh; */
+  /* height: 100vh; */
+  z-index: 5;
 
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+
+.leaflet-container {
+  height: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 968px) {
+  .leaflet-container {
+    /* width: 95%; */
+    height: 45rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-map-container {
+    padding: 7rem 2rem;
+  }
+
+  .leaflet-container {
+    height: 35rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-map-container {
+    padding: 5rem 1rem;
+  }
+
+  .leaflet-container {
+    height: 30rem;
+  }
 }

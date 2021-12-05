@@ -4,6 +4,7 @@ import HomeAbout from '../../components/Home-Sections/HomeAbout/HomeAbout';
 import HomeTeam from '../../components/Home-Sections/HomeTeam/HomeTeam';
 import HomeActions from '../../components/Home-Sections/HomeActions/HomeActions';
 import HomeTestimonials from '../../components/Home-Sections/HomeTestimonials/HomeTestimonials';
+import HomeMap from '../../components/Home-Sections/HomeMap/HomeMap';
 import './Home.css';
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
         <HomeTeam />
         <HomeActions />
         <HomeTestimonials />
+        <HomeMap />
       </div>
     </>
   );

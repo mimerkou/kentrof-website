@@ -2,7 +2,7 @@
 .home-banner {
   position: relative;
   width: 100%;
-  height: calc(100vh - 8rem);
+  min-height: calc(100vh - 8rem);
   display: flex;
   justify-content: center;
   align-items: center;
