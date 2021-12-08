@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
+import Copyright from './components/Copyright/Copyright';
 import Home from './pages/Home/Home';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/home" element={<Home />} />
         </Routes>
         <Footer />
+        <Copyright />
       </BrowserRouter>
     </>
   );
