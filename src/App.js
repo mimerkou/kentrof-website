@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
+import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
