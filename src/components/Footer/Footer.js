@@ -20,12 +20,20 @@ const Footer = () => {
         </p>
         <ul className="social-icons">
           <li>
-            <a href="#">
+            <a
+              href="https://www.facebook.com/centre.golden.ratio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://www.instagram.com/kentro_f/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
           </li>
@@ -33,12 +41,13 @@ const Footer = () => {
       </div>
 
       <div>
-        <h3>Οροι και προϋποθεσεις</h3>
+        <h3>Η εταιρια</h3>
         <ul className="terms">
           <li>
             <a
               href="https://5d45f3d5-0b27-40a8-a20f-7f23399ee799.filesusr.com/ugd/5aa2aa_85ecb6da64714a8ba696e3fb461b1867.pdf?index=true"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Καταστατικό
             </a>
