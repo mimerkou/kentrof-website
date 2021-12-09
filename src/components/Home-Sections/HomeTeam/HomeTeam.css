@@ -35,12 +35,12 @@
   width: 20rem;
   height: 20rem;
   box-shadow: 0 0 15px rgba(23, 66, 86, 0.4);
-  transform: scale(1.01);
+  /* border-radius: 50%; */
   transition: all 0.3s;
 }
 
 .team-info img:hover {
-  transform: scale(1.08);
+  transform: translateY(-0.5rem);
 }
 
 .team-info h4 {
