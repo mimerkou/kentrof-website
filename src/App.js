@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Copyright from './components/Copyright/Copyright';
 import Home from './pages/Home/Home';
 import WhoWeAre from './pages/WhoWeAre/WhoWeAre';
+import WhyCenterF from './pages/WhyCenterF/WhyCenterF';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/who-we-are" element={<WhoWeAre />} />
+          <Route path="/why-center-f" element={<WhyCenterF />} />
         </Routes>
         <Footer />
         <Copyright />
