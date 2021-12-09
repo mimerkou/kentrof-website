@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Sidebar from './components/Sidebar/Sidebar';
+import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Copyright from './components/Copyright/Copyright';
 import Home from './pages/Home/Home';
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
         <Routes>

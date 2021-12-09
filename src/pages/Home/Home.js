@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 import HomeBanner from '../../components/Home-Sections/HomeBanner/HomeBanner';
 import HomeAbout from '../../components/Home-Sections/HomeAbout/HomeAbout';
 import HomeTeam from '../../components/Home-Sections/HomeTeam/HomeTeam';
@@ -9,12 +8,6 @@ import HomeMap from '../../components/Home-Sections/HomeMap/HomeMap';
 import './Home.css';
 
 const Home = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
   return (
     <>
       <div className="home-container">
