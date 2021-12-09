@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import Copyright from './components/Copyright/Copyright';
 import Home from './pages/Home/Home';
+import WhoWeAre from './pages/WhoWeAre/WhoWeAre';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/who-we-are" element={<WhoWeAre />} />
         </Routes>
         <Footer />
         <Copyright />

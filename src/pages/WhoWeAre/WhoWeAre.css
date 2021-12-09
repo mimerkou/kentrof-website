@@ -1,0 +1,12 @@
+.who-we-are-container {
+  color: #808080;
+}
+
+.who-we-are-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 3rem;
+  margin: 0 auto;
+  max-width: 150rem;
+}
