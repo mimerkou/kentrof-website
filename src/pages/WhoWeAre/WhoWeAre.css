@@ -51,8 +51,17 @@
 }
 
 .who-we-are-box ul {
-  list-style: square;
+  list-style: none;
   margin-bottom: 1.5rem;
+}
+
+.who-we-are-box ul li::before {
+  content: '\25AA';
+  color: #174256;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 @media screen and (max-width: 968px) {
