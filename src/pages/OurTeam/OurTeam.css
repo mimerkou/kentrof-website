@@ -1,0 +1,31 @@
+.our-team-container {
+  color: #808080;
+  padding: 5rem 3rem;
+}
+
+.our-team-container h2 {
+  padding: 0 3rem;
+  color: #174256;
+  /* margin-bottom: 2.4rem; */
+  font-size: 3rem;
+}
+
+.our-team-container h2::after {
+  display: block;
+  height: 2px;
+  background-color: #174256;
+  content: ' ';
+  width: 8rem;
+  margin: 1rem 0 3rem 0;
+}
+
+@media screen and (max-width: 480px) {
+  .our-team-container {
+    color: #808080;
+    padding: 3rem 1rem;
+  }
+
+  .our-team-container h2 {
+    padding: 0 1.5rem;
+  }
+}

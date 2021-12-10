@@ -8,6 +8,7 @@ import Copyright from './components/Copyright/Copyright';
 import Home from './pages/Home/Home';
 import WhoWeAre from './pages/WhoWeAre/WhoWeAre';
 import WhyCenterF from './pages/WhyCenterF/WhyCenterF';
+import OurTeam from './pages/OurTeam/OurTeam';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/why-center-f" element={<WhyCenterF />} />
+          <Route path="/our-team" element={<OurTeam />} />
         </Routes>
         <Footer />
         <Copyright />
