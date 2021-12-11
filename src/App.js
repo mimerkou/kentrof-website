@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import WhoWeAre from './pages/WhoWeAre/WhoWeAre';
 import WhyCenterF from './pages/WhyCenterF/WhyCenterF';
 import OurTeam from './pages/OurTeam/OurTeam';
+import Actions from './pages/Actions/Actions';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/why-center-f" element={<WhyCenterF />} />
           <Route path="/our-team" element={<OurTeam />} />
+          <Route path="/actions" element={<Actions />} />
         </Routes>
         <Footer />
         <Copyright />
