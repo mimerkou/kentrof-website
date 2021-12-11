@@ -1,0 +1,49 @@
+.no-action-found {
+  height: calc(100vh - 8rem);
+  height: 40vh;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.no-action-found p {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.action-detail-container {
+  color: #808080;
+  padding: 5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.action-detail-info h2 {
+  color: #174256;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.detail-date {
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.detail-text {
+  /* white-space: pre-wrap; */
+  white-space: pre-line;
+}
+
+.action-detail-btn-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
