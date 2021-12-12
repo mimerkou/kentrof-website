@@ -51,3 +51,29 @@
   width: 100%;
   padding-left: 2rem;
 }
+
+@media screen and (max-width: 968px) {
+  .donation-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .donation-box {
+    padding: 0 2.5rem;
+  }
+
+  .donation-img-wrap img {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .donation-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .donation-box {
+    padding: 0 1rem 0 2rem;
+  }
+}
