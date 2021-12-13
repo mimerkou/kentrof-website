@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../Button/Button';
-import homeAboutImg from '../../../assets/kentro-f-03.jpg';
+import homeAboutImg from '../../../assets/kentro-f-01.jpg';
 import './HomeAbout.css';
 
 const HomeAbout = () => {

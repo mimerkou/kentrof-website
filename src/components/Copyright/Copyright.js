@@ -7,8 +7,8 @@ const Copyright = () => {
   return (
     <div className="copyright">
       Copyright &copy; {year} Κέντρο Φ
-      <br />
-      All rights reserved
+      {/* <br />
+      All rights reserved */}
     </div>
   );
 };

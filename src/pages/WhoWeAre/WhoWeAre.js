@@ -1,5 +1,5 @@
 import React from 'react';
-import whoWeAreImg from '../../assets/kentro-f-01.jpg';
+import whoWeAreImg from '../../assets/elderly.jpg';
 import './WhoWeAre.css';
 
 const WhoWeAre = () => {
