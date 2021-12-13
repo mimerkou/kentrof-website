@@ -13,6 +13,7 @@ import Actions from './pages/Actions/Actions';
 import ActionDetail from './pages/Actions/ActionDetail';
 import Donation from './pages/Donation/Donation';
 import Volunteering from './pages/Volunteering/Volunteering';
+import Practice from './pages/Practice/Practice';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/actions/:actionId" element={<ActionDetail />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/volunteering" element={<Volunteering />} />
+          <Route path="/practice" element={<Practice />} />
         </Routes>
         <Footer />
         <Copyright />
