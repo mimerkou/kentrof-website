@@ -1,5 +1,5 @@
 .home-about-container {
-  background: #fff;
+  background: #f4f4f4;
   color: #808080;
 }
 
@@ -42,12 +42,20 @@
 
 .home-about-img-wrap img {
   width: 100%;
-  padding-left: 1rem;
+  padding-right: 2rem;
 }
 
 @media screen and (max-width: 968px) {
   .home-about-wrapper {
     flex-wrap: wrap;
+  }
+
+  .box1 {
+    order: 2;
+  }
+
+  .box2 {
+    order: 1;
   }
 }
 

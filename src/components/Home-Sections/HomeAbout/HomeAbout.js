@@ -7,7 +7,13 @@ const HomeAbout = () => {
   return (
     <div className="home-about-container">
       <div className="home-about-wrapper">
-        <div className="home-about-box">
+        <div className="home-about-box box1">
+          <div className="home-about-img-wrap">
+            <img src={homeAboutImg} alt="About" />
+          </div>
+        </div>
+
+        <div className="home-about-box box2">
           <h2>Ψυχολογική υποστήριξη ευάλωτων ομάδων</h2>
           <p>
             Το Κέντρο Φ αποτελεί μια σύμπραξη νέων επιστημόνων της ψυχικής
@@ -26,12 +32,6 @@ const HomeAbout = () => {
             <Button path="/why-center-f" darkBg={false}>
               Περισσότερα
             </Button>
-          </div>
-        </div>
-
-        <div className="home-about-box">
-          <div className="home-about-img-wrap">
-            <img src={homeAboutImg} alt="About" />
           </div>
         </div>
       </div>
