@@ -6,11 +6,12 @@ import './Donors.css';
 const Donors = () => {
   return (
     <div className="donors-container">
-      <div className="donors-wrapper donors-heading">
+      {/* <div className="donors-wrapper donors-heading">
         <div className="donors-box">
           <h2>Χρηματοδότες</h2>
         </div>
-      </div>
+      </div> */}
+      <h2>Χρηματοδότες</h2>
 
       <div className="donors-wrapper desmos">
         <div className="donors-box">

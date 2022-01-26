@@ -3,12 +3,30 @@
   padding: 5rem 3rem;
 }
 
+.donors-container h2 {
+  color: #174256;
+  font-size: 3rem;
+  text-align: center;
+  /* margin-bottom: 2rem; */
+}
+
+.donors-container h2::after {
+  display: block;
+  text-align: center;
+  height: 2px;
+  background-color: #174256;
+  content: ' ';
+  width: 8rem;
+  margin: 1rem 0 3rem 0;
+  margin: 1rem auto;
+}
+
 .donors-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem 3rem;
-  margin: 3rem auto;
+  margin: 5rem auto;
   max-width: 150rem;
 }
 
