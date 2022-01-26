@@ -14,7 +14,9 @@ const SingleDonor = (props) => {
       <div className="donors-box">
         <h4>{name}</h4>
         <p>{text1}</p>
+        <br />
         <p>{text2}</p>
+        <br />
         <p>{text3}</p>
       </div>
     </div>

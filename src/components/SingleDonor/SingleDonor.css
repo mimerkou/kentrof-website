@@ -34,3 +34,26 @@
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 968px) {
+  .donors-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .donors-box {
+    /* padding: 0 1.5rem 0 3rem; */
+    padding: 0 1rem;
+  }
+
+  .donors-img-wrap img {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .donors-wrapper {
+    padding: 3rem 1rem;
+  }
+}
