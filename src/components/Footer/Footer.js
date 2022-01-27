@@ -77,9 +77,7 @@ const Footer = () => {
             <span>
               <FaEnvelope />
             </span>
-            <span>
-              <a href="mailto:info@kentrof.com">info@kentrof.com</a>
-            </span>
+            <span>info@kentrof.com</span>
           </li>
           <li>
             <span>
